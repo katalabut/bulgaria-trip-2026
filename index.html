@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Болгария, 24–30 октября 2026</title>
+<meta name="theme-color" content="#1E4A37">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#E9ECE8;--surface:#FFFFFF;--ink:#16211B;--muted:#56625A;--line:#D3DAD3;
+  --pine:#1E4A37;--pine-ink:#FFFFFF;--gold:#9A600E;--gold-soft:#F5E6C6;
+  --warn-bg:#FBE9DA;--warn-ink:#7A3A0C;--ph1:#C9D3CB;--ph2:#E3D3B2;
+  --display:"Unbounded","Arial Black",system-ui,sans-serif;
+  --text:"Golos Text",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0E1411;--surface:#17201B;--ink:#E6ECE8;--muted:#9CA9A1;--line:#29352E;
+    --pine:#7CC3A0;--pine-ink:#0E1411;--gold:#E3AE57;--gold-soft:#2B2416;
+    --warn-bg:#33231A;--warn-ink:#F2B98C;--ph1:#1F2A24;--ph2:#2B2A22;
+    color-scheme:dark;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(86px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--text);font-size:16px;line-height:1.55;padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:8px}
+.wrap{max-width:620px;margin:0 auto}
+
+/* Hero */
+.hero{position:relative;min-height:min(86svh,640px);display:flex;align-items:flex-end;color:#fff;background:#1E4A37;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,14,10,.15) 0%,rgba(8,14,10,.05) 35%,rgba(8,14,10,.82) 100%)}
+.heroIn{position:relative;z-index:1;width:100%;max-width:620px;margin:0 auto;padding:calc(20px + env(safe-area-inset-top,0px)) 20px 26px}
+.hero h1{font-family:var(--display);font-weight:700;font-size:clamp(46px,15vw,84px);line-height:.95;letter-spacing:-.025em;margin:0 0 10px}
+.hero .sub{font-size:17px;margin:0 0 18px;opacity:.95}
+.route{list-style:none;margin:0 0 20px;padding:0;display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;font-weight:600;font-size:15px}
+.route li{display:flex;align-items:center;gap:7px}
+.route li::before{content:"";width:8px;height:8px;border-radius:50%;border:2px solid #F2C46B;flex:none}
+.route li:first-child::before,.route li:last-child::before{background:#F2C46B}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{appearance:none;border:0;cursor:pointer;font:600 15px/1 var(--text);padding:13px 16px;border-radius:14px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;min-height:46px}
+.btnSolid{background:#fff;color:#16211B}
+.btnGlass{background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.35);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.hero.noPhoto{min-height:0;background:radial-gradient(420px 220px at 85% 0%,rgba(242,196,107,.28),transparent 70%),linear-gradient(160deg,#245840,#10241A)}
+.hero.noPhoto::after{display:none}
+.hero.noPhoto .heroIn{padding-top:calc(64px + env(safe-area-inset-top,0px))}
+
+/* Stays */
+.section{padding:28px 0 6px}
+.section h2{font-family:var(--display);font-weight:500;font-size:20px;margin:0 20px 14px;letter-spacing:-.01em}
+.stays{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 20px;padding:0 20px 8px;scrollbar-width:none}
+.stays::-webkit-scrollbar{display:none}
+.stay{flex:0 0 78%;max-width:300px;scroll-snap-align:start;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.stay .nights{font-family:var(--display);font-weight:700;font-size:22px;color:var(--gold);letter-spacing:-.02em}
+.stay b{font-size:16px;line-height:1.3}
+.stay span{color:var(--muted);font-size:14px;line-height:1.4}
+.stay a{margin-top:auto;padding-top:8px;font-weight:600;font-size:14px;color:var(--pine);text-decoration:none}
+
+/* Day nav */
+.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);padding:calc(10px + env(safe-area-inset-top,0px)) 0 10px;margin-top:18px;border-bottom:1px solid var(--line)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:0 20px;scrollbar-width:none;max-width:620px;margin:0 auto}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:16px;padding:8px 13px 9px;cursor:pointer;text-align:left;font-family:var(--text);display:flex;flex-direction:column;min-width:74px;position:relative}
+.chip .n{font-family:var(--display);font-weight:700;font-size:20px;line-height:1.1}
+.chip .c{font-size:12px;color:var(--muted);white-space:nowrap}
+.chip[aria-selected="true"]{background:var(--pine);border-color:var(--pine);color:var(--pine-ink)}
+.chip[aria-selected="true"] .c{color:inherit;opacity:.85}
+.chip .today{position:absolute;top:7px;right:9px;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+
+/* Days */
+.day{padding:24px 20px 8px;max-width:620px;margin:0 auto}
+.js .day{display:none}
+.js .day.active{display:block}
+.dayHead .date{color:var(--muted);font-size:15px;margin:0}
+.dayHead h2{font-family:var(--display);font-weight:700;font-size:clamp(24px,7vw,30px);line-height:1.15;letter-spacing:-.02em;margin:4px 0 8px}
+.dayHead .lead{margin:0;color:var(--muted);font-size:16px}
+.note{margin:16px 0 0;padding:13px 15px;border-radius:14px;background:var(--surface);border:1px solid var(--line);font-size:15px;line-height:1.5}
+.note b{display:block;margin-bottom:2px}
+.note.warn{background:var(--warn-bg);border-color:transparent;color:var(--warn-ink)}
+
+/* Timeline */
+.stops{position:relative;margin:22px 0 0;padding-left:20px}
+.stops::before{content:"";position:absolute;left:5px;top:10px;bottom:24px;width:2px;background:var(--line);border-radius:2px}
+.stop{position:relative;margin:0 0 18px;background:var(--surface);border:1px solid var(--line);border-radius:20px}
+.stop::before{content:"";position:absolute;left:-20px;top:18px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:3px solid var(--gold)}
+.stop.hasMedia::before{top:22px}
+.media{margin:0;aspect-ratio:16/10;background:linear-gradient(135deg,var(--ph1),var(--ph2));overflow:hidden;border-radius:19px 19px 0 0}
+.media img{width:100%;height:100%;object-fit:cover}
+.body{padding:15px 16px 16px}
+.time{font-family:var(--display);font-weight:500;font-size:14px;color:var(--gold);margin:0 0 4px;letter-spacing:.01em}
+.stop h3{font-size:19px;line-height:1.25;margin:0 0 6px;font-weight:700}
+.stop p{margin:0 0 10px;font-size:15.5px}
+.stop .why{background:var(--gold-soft);border-radius:12px;padding:10px 12px;font-size:15px}
+.stop .why b{font-weight:700}
+.facts{list-style:none;padding:0;margin:4px 0 12px;display:flex;flex-wrap:wrap;gap:6px}
+.facts li{font-size:13px;padding:5px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.links{display:flex;flex-wrap:wrap;gap:8px}
+.map{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:14px;text-decoration:none;color:var(--pine);padding:9px 13px;border-radius:12px;border:1px solid var(--line);min-height:40px}
+.map svg{flex:none}
+.stop.plain{background:transparent;border-style:dashed}
+.stop.optional{border-style:dashed}
+.optTag{display:inline-block;font-size:13px;color:var(--muted);margin-bottom:4px}
+
+/* Night card */
+.stop.night{background:#0D1426;border-color:#0D1426;color:#E9ECF5}
+.stop.night::before{border-color:#F2C46B}
+.stop.night .time{color:#F2C46B}
+.stop.night .why{background:rgba(242,196,107,.13);color:#F4E4C1}
+.stop.night .facts li{border-color:rgba(255,255,255,.18);color:#C5CBDB}
+.stop.night .map{color:#F2C46B;border-color:rgba(242,196,107,.35)}
+.nightSky{height:96px;position:relative;border-radius:19px 19px 0 0;overflow:hidden;background:radial-gradient(120px 60px at 70% 120%,rgba(242,196,107,.55),transparent 70%),linear-gradient(180deg,#0B1022,#18213D)}
+.nightSky i{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;opacity:.7}
+
+/* Bus */
+.buses{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 12px}
+.buses span{font-family:var(--display);font-weight:500;font-size:14px;padding:6px 10px;border-radius:10px;border:1px solid var(--line);color:var(--muted)}
+.buses span.main{background:var(--pine);border-color:var(--pine);color:var(--pine-ink)}
+.buses span.backup{border-color:var(--gold);color:var(--gold)}
+
+/* Footer */
+footer{max-width:620px;margin:16px auto 0;padding:24px 20px 40px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
+footer .actions{margin-bottom:18px}
+footer .btn{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+footer .btn.primary{background:var(--pine);color:var(--pine-ink);border-color:var(--pine)}
+footer p{margin:0 0 6px}
+
+@media (prefers-reduced-motion:reduce){
+  .media img{transition:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img src="assets/images/theatre.jpg" alt="Античный театр в Пловдиве" onerror="this.parentNode.classList.add('noPhoto');this.remove()">
+  <div class="heroIn">
+    <h1>Болгария</h1>
+    <p class="sub">С 24 по 30 октября 2026, на машине</p>
+    <ol class="route" aria-label="Маршрут">
+      <li>Пловдив</li><li>Шипка</li><li>Велико-Тырново</li><li>Чернооково</li><li>Балчик</li><li>София</li>
+    </ol>
+    <div class="actions">
+      <a class="btn btnSolid" href="https://www.google.com/maps/dir/Plovdiv,+Bulgaria/Shipka,+Bulgaria/Veliko+Tarnovo,+Bulgaria/Chernookovo,+General+Toshevo,+Bulgaria/Balchik,+Bulgaria/Sofia,+Bulgaria" target="_blank" rel="noopener">Маршрут в Google Maps</a>
+      <button class="btn btnGlass" type="button" onclick="sharePlan()">Поделиться</button>
+    </div>
+  </div>
+</header>
+
+<section class="section wrap" aria-labelledby="staysTitle">
+  <h2 id="staysTitle">Где ночуем</h2>
+  <div class="stays">
+    <div class="stay">
+      <div class="nights">23–25</div>
+      <b>DoubleTree by Hilton Plovdiv Center</b>
+      <span>Пловдив</span>
+      <a href="https://www.google.com/maps/search/?api=1&query=DoubleTree+by+Hilton+Plovdiv+Center" target="_blank" rel="noopener">На карте</a>
+    </div>
+    <div class="stay">
+      <div class="nights">25–27</div>
+      <b>Guest House Diabora</b>
+      <span>Велико-Тырново</span>
+      <a href="https://www.google.com/maps/search/?api=1&query=Guest+House+Diabora+Veliko+Tarnovo" target="_blank" rel="noopener">На карте</a>
+    </div>
+    <div class="stay">
+      <div class="nights">27–29</div>
+      <b>Апартаменты в Балчике</b>
+      <span>ул. „Възкресия Деветакова“ 21, Balchik 9600</span>
+      <a href="https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.+%D0%92%D1%8A%D0%B7%D0%BA%D1%80%D0%B5%D1%81%D0%B8%D1%8F+%D0%94%D0%B5%D0%B2%D0%B5%D1%82%D0%B0%D0%BA%D0%BE%D0%B2%D0%B0+21,+Balchik,+Bulgaria" target="_blank" rel="noopener">На карте</a>
+    </div>
+    <div class="stay">
+      <div class="nights">29–30</div>
+      <b>Sofia Tech Park Apartments - Premium</b>
+      <span>ул. „Ген. Йордан Венедиков“ 4, София 1784</span>
+      <a href="https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.+%D0%93%D0%B5%D0%BD.+%D0%99%D0%BE%D1%80%D0%B4%D0%B0%D0%BD+%D0%92%D0%B5%D0%BD%D0%B5%D0%B4%D0%B8%D0%BA%D0%BE%D0%B2+4,+Sofia+1784,+Bulgaria" target="_blank" rel="noopener">На карте</a>
+    </div>
+  </div>
+</section>
+
+<nav class="nav" aria-label="Дни поездки">
+  <div class="chips" role="tablist">
+    <button class="chip" role="tab" data-day="d24"><span class="n">24</span><span class="c">сб, Пловдив</span></button>
+    <button class="chip" role="tab" data-day="d25"><span class="n">25</span><span class="c">вс, Шипка</span></button>
+    <button class="chip" role="tab" data-day="d26"><span class="n">26</span><span class="c">пн, Тырново</span></button>
+    <button class="chip" role="tab" data-day="d27"><span class="n">27</span><span class="c">вт, Чернооково</span></button>
+    <button class="chip" role="tab" data-day="d28"><span class="n">28</span><span class="c">ср, Чернооково</span></button>
+    <button class="chip" role="tab" data-day="d29"><span class="n">29</span><span class="c">чт, София</span></button>
+    <button class="chip" role="tab" data-day="d30"><span class="n">30</span><span class="c">пт, вылет</span></button>
+  </div>
+</nav>
+
+<main>
+
+<!-- 24 -->
+<section class="day" id="d24" role="tabpanel">
+  <div class="dayHead">
+    <p class="date">Суббота, 24 октября</p>
+    <h2>Пловдив без спешки</h2>
+    <p class="lead">Один цельный пеший маршрут: римский город → Старый город → Капана → центр.</p>
+  </div>
+  <div class="note"><b>Старт около 09:00</b>Машина сегодня не нужна. Основной маршрут удобно пройти пешком от Hilton.</div>
+
+  <div class="stops">
+    <article class="stop hasMedia">
+      <figure class="media"><img src="assets/images/basilica.jpg" alt="Мозаики Епископской базилики"></figure>
+      <div class="body">
+        <p class="time">09:00–09:50</p>
+        <h3>Епископская базилика Филиппополя</h3>
+        <p>Большой современный музей над раннехристианской базиликой IV–VI веков. Главная фишка — огромные напольные мозаики с птицами, геометрией и символами раннего христианства.</p>
+        <p class="why"><b>Зачем идти:</b> это один из самых сильных археологических объектов Пловдива и хороший старт дня в помещении.</p>
+        <ul class="facts"><li>⏱ 45–60 мин</li><li>🏛 внутри</li><li>09:00–18:00</li></ul>
+        <div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=Bishop%27s+Basilica+of+Philippopolis" target="_blank" rel="noopener">Google Maps</a></div>
+      </div>
+    </article>
+
+    <article class="stop hasMedia">
+      <figure class="media"><img src="assets/images/theatre.jpg" alt="Античный театр Филиппополя"></figure>
+      <div class="body">
+        <p class="time">10:10–11:00</p>
+        <h3>Античный театр Филиппополя</h3>
+        <p>Римский театр I века, встроенный в склон между двумя холмами. Отсюда особенно хорошо видно, как античный город буквально встроен в современный Пловдив.</p>
+        <p class="why"><b>Must-see:</b> главный символ города и один из лучше всего сохранившихся античных театров.</p>
+        <ul class="facts"><li>⏱ 40–50 мин</li><li>📸 панорама</li><li>09:30–18:00</li></ul>
+        <div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=Ancient+Theatre+of+Philippopolis" target="_blank" rel="noopener">Google Maps</a></div>
+      </div>
+    </article>
+
+    <article class="stop hasMedia">
+      <figure class="media"><img src="assets/images/hindliyan.jpg" alt="Дом Хиндлияна"></figure>
+      <div class="body">
+        <p class="time">11:10–12:20</p>
+        <h3>Старый город → Хисар Капия → Дом Хиндлияна</h3>
+        <p>Пройдите через мощёные улицы Старого города к старым воротам Хисар Капия. В доме Хиндлияна — расписные стены и потолки, богатые интерьеры XIX века и необычная старинная банная комната.</p>
+        <p class="why"><b>Не надо ходить по всем домам-музеям:</b> одного Хиндлияна достаточно, чтобы понять стиль пловдивских купеческих домов.</p>
+        <ul class="facts"><li>⏱ 60–70 мин</li><li>🏠 интерьер</li><li>до 18:00</li></ul>
+        <div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=Hindliyan+House+Plovdiv" target="_blank" rel="noopener">Google Maps</a></div>
+      </div>
+    </article>
+
+    <article class="stop hasMedia">
+      <figure class="media"><img src="assets/images/nebet-tepe.jpg" alt="Небет-Тепе"></figure>
+      <div class="body">
+        <p class="time">12:30–13:00</p>
+        <h3>Небет-Тепе</h3>
+        <p>Археологический холм над Старым городом с остатками древних укреплений и открытой панорамой Пловдива.</p>
+        <p class="why"><b>Зачем идти:</b> короткая бесплатная остановка ради вида, без ещё одного музея.</p>
+        <ul class="facts"><li>⏱ 20–30 мин</li><li>🌤 на улице</li><li>бесплатно</li></ul>
+        <div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=Nebet+Tepe+Plovdiv" target="_blank" rel="noopener">Google Maps</a></div>
+      </div>
+    </article>
+
+    <article class="stop plain">
+      <div class="body">
+        <p class="time">13:15–15:00</p>
+        <h3>Капана: обед и прогулка</h3>
+        <p>Квартал маленьких улиц, кафе и мастерских. Здесь удобно сделать длинную паузу, а потом выйти к Джумая-джамии и Римскому стадиону.</p>
+        <div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=Kapana+Plovdiv" target="_blank" rel="noopener">Капана на карте</a></div>
+      </div>
+    </article>
+
+    <article class="stop hasMedia">
+      <figure class="media"><img src="assets/images/stadium.jpg" alt="Римский стадион и Джумая-джамия"></figure>
+      <div class="body">
+        <p class="time">15:00–17:00</p>
+        <h3>Джумая-джамия → Римский стадион → Княз Александър I</h3>
+        <p>Финальная спокойная часть маршрута: кусок огромного римского стадиона прямо под современной пешеходной улицей, затем прогулка по центру и Цар-Симеоновой градине.</p>
+        <ul class="facts"><li>без спешки</li><li>☕ можно закончить раньше</li></ul>
+        <div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=Dzhumaya+Mosque+Plovdiv" target="_blank" rel="noopener">Google Maps</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="day" id="d25" role="tabpanel">
+  <div class="dayHead">
+    <p class="date">Воскресенье, 25 октября</p>
+    <h2>Пловдив → Шипка → Велико-Тырново</h2>
+    <p class="lead">Самый красивый дорожный день: фракийская гробница, золотые купола и Балканские горы.</p>
+  </div>
+  <div class="note warn"><b>Ночью перевод часов</b>В Болгарии заканчивается летнее время. Утром телефоны должны автоматически перевести часы на 1 час назад.</div>
+  <div class="note"><b>08:30, выезд из Hilton</b>Пловдив → Голямата Косматка → храм в Шипке → Памятник Свободы → Guest House Diabora.</div>
+
+  <div class="stops">
+    <article class="stop hasMedia">
+      <figure class="media"><img src="assets/images/golyama-kosmatka.jpg" alt="Гробница Голямата Косматка"></figure>
+      <div class="body">
+        <p class="time">~10:30–11:20</p>
+        <h3>Гробница Севта III — Голямата Косматка</h3>
+        <p>Фракийский царский курган IV–III века до н. э. Здесь нашли бронзовую голову царя Севта III, золотой венок и оружие; внутрь ведёт длинный каменный коридор к погребальным камерам.</p>
+        <p class="why"><b>Почему именно она:</b> это настоящая древняя гробница, а не реконструкция, и она удобно стоит по пути к Шипке.</p>
+        <ul class="facts"><li>⏱ 45–50 мин</li><li>🏺 археология</li></ul>
+        <div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=Tomb+of+Seuthes+III+Golyama+Kosmatka" target="_blank" rel="noopener">Google Maps</a></div>
+      </div>
+    </article>
+
+    <article class="stop hasMedia">
+      <figure class="media"><img src="assets/images/shipka-church.jpg" alt="Храм-памятник Рождества Христова в Шипке"></figure>
+      <div class="body">
+        <p class="time">~11:35–12:15</p>
+        <h3>Храм-памятник «Рождество Христово»</h3>
+        <p>Красно-белая церковь с золотыми куполами у подножия Шипкинского перевала. Построена в память о погибших в Русско-турецкой войне 1877–1878 годов.</p>
+        <p class="why"><b>Зачем заезжать:</b> очень фотогеничное место и короткая остановка прямо по маршруту.</p>
+        <ul class="facts"><li>⏱ 30–40 мин</li><li>⛪ внутри и снаружи</li></ul>
+        <div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=Shipka+Memorial+Church" target="_blank" rel="noopener">Google Maps</a></div>
+      </div>
+    </article>
+
+    <article class="stop hasMedia">
+      <figure class="media"><img src="assets/images/shipka-monument.jpg" alt="Памятник Свободы на Шипке"></figure>
+      <div class="body">
+        <p class="time">~13:15–14:10</p>
+        <h3>Шипкинский перевал: Памятник Свободы</h3>
+        <p>Серпантин через Стара-Планину, мемориал и широкие виды на горы. В конце октября здесь особенно красиво, если лес ещё держит осеннюю листву.</p>
+        <p class="why"><b>Условие:</b> ехать к памятнику стоит при нормальной видимости. В туман или сильный дождь — просто проехать перевал. Внутренняя экспозиция памятника закрыта на реставрацию до 2029 года.</p>
+        <ul class="facts"><li>⏱ 40–55 мин</li><li>🍂 осень</li><li>🌤 только при хорошей погоде</li></ul>
+        <div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=Shipka+Monument+Bulgaria" target="_blank" rel="noopener">Google Maps</a></div>
+      </div>
+    </article>
+
+    <article class="stop plain">
+      <div class="body">
+        <p class="time">Вечер</p>
+        <h3>Ночь: Guest House Diabora</h3>
+        <p>После Шипки — прямо в Велико-Тырново. Вечером только заселение, ужин и отдых.</p>
+        <div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=Guest+House+Diabora+Veliko+Tarnovo" target="_blank" rel="noopener">Guest House Diabora</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- 26 -->
+<section class="day" id="d26" role="tabpanel">
+  <div class="dayHead">
+    <p class="date">Понедельник, 26 октября</p>
+    <h2>Велико-Тырново</h2>
+    <p class="lead">Средневековая столица днём, подсвеченный Царевец вечером.</p>
+  </div>
+
+  <div class="stops">
+    <article class="stop hasMedia">
+      <figure class="media"><img src="assets/images/tsarevets.jpg" alt="Крепость Царевец"></figure>
+      <div class="body">
+        <p class="time">09:00–11:30</p>
+        <h3>Крепость Царевец</h3>
+        <p>Главная крепость Второго Болгарского царства: стены, башни, дворцовый комплекс и Патриаршая церковь на вершине холма.</p>
+        <p class="why"><b>Важно:</b> с 25 октября действует зимний режим — посетителей запускают с 09:00 до 16:00, комплекс закрывается в 17:00. Поэтому идём первым делом.</p>
+        <ul class="facts"><li>⏱ 2–2,5 ч</li><li>👟 много подъёмов</li><li>09:00 старт</li></ul>
+        <div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=Tsarevets+Fortress" target="_blank" rel="noopener">Google Maps</a></div>
+      </div>
+    </article>
+
+    <article class="stop hasMedia">
+      <figure class="media"><img src="assets/images/forty-martyrs.jpg" alt="Церковь Сорока мучеников"></figure>
+      <div class="body">
+        <p class="time">11:40–12:20</p>
+        <h3>Церковь Сорока мучеников</h3>
+        <p>Один из ключевых памятников болгарской средневековой истории. Церковь связана с царём Иваном Асеном II и провозглашением независимости Болгарии в 1908 году.</p>
+        <p class="why"><b>Понедельник:</b> техническая пауза 09:00–11:00, поэтому после Царевца попадаете как раз вовремя.</p>
+        <ul class="facts"><li>⏱ 30–40 мин</li><li>до 17:00</li></ul>
+        <div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=Holy+Forty+Martyrs+Church+Veliko+Tarnovo" target="_blank" rel="noopener">Google Maps</a></div>
+      </div>
+    </article>
+
+    <article class="stop hasMedia">
+      <figure class="media"><img src="assets/images/veliko-tarnovo.jpg" alt="Старый Велико-Тырново над Янтрой"></figure>
+      <div class="body">
+        <p class="time">13:30–16:00</p>
+        <h3>Самоводская чаршия → улица Генерал Гурко</h3>
+        <p>Старый ремесленный квартал, маленькие мастерские и одна из самых красивых улиц города: дома буквально висят над ущельем Янтры.</p>
+        <p class="why"><b>Формат:</b> без музеев и расписаний — просто прогулка, кофе и виды.</p>
+        <div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=Samovodska+Charshiya+Veliko+Tarnovo" target="_blank" rel="noopener">Google Maps</a></div>
+      </div>
+    </article>
+
+    <article class="stop night">
+      <div class="nightSky" aria-hidden="true"><i style="left:12%;top:22%"></i><i style="left:28%;top:48%"></i><i style="left:44%;top:16%"></i><i style="left:61%;top:36%"></i><i style="left:83%;top:20%"></i><i style="left:92%;top:52%"></i></div>
+      <div class="body">
+        <p class="time">18:20 → 19:00</p>
+        <h3>Sound &amp; Light: смотреть бесплатно</h3>
+        <p>В 19:00 крепость Царевец подсвечивается под музыку. Платную площадку не используем.</p>
+        <p class="why"><b>Основная точка:</b> Stambolov Bridge — прийти примерно к 18:20–18:30 и выбрать место с открытым видом в сторону Царевца.</p>
+        <p class="why"><b>Запасной комфортный вариант:</b> панорамная зона или ресторан Grand Hotel Yantra с видом на крепость.</p>
+        <ul class="facts"><li>19:00 шоу</li><li>бесплатно с моста</li><li>прийти заранее</li></ul>
+        <div class="links">
+          <a class="map" href="https://www.google.com/maps/search/?api=1&query=Stambolov+Bridge+Veliko+Tarnovo" target="_blank" rel="noopener">Stambolov Bridge</a>
+          <a class="map" href="https://www.google.com/maps/search/?api=1&query=Grand+Hotel+Yantra+Veliko+Tarnovo" target="_blank" rel="noopener">Grand Hotel Yantra</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- 27 -->
+<section class="day" id="d27" role="tabpanel">
+  <div class="dayHead">
+    <p class="date">Вторник, 27 октября</p>
+    <h2>Велико-Тырново → Чернооково → Балчик</h2>
+    <p class="lead">Сегодня без достопримечательностей по дороге: сначала Чернооково, потом заселение у моря.</p>
+  </div>
+  <div class="note"><b>Утром выезд из Guest House Diabora</b>Не едем сначала в Балчик: логичнее сразу направляться в Чернооково, чтобы не делать обратный крюк.</div>
+
+  <div class="stops">
+    <article class="stop plain">
+      <div class="body">
+        <p class="time">День</p>
+        <h3>Чернооково, община Генерал-Тошево</h3>
+        <p>Первый день в Чернооково. Остальную туристическую программу не ставим, чтобы день не превратился в гонку.</p>
+        <div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=Chernookovo+General+Toshevo+Bulgaria" target="_blank" rel="noopener">Google Maps</a></div>
+      </div>
+    </article>
+
+    <article class="stop hasMedia">
+      <figure class="media"><img src="assets/images/balchik.jpg" alt="Балчик"></figure>
+      <div class="body">
+        <p class="time">Вечер</p>
+        <h3>Апартаменты в Балчике</h3>
+        <p>ул. „Възкресия Деветакова“ 21, Balchik, Dobrich 9600</p>
+        <div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.+%D0%92%D1%8A%D0%B7%D0%BA%D1%80%D0%B5%D1%81%D0%B8%D1%8F+%D0%94%D0%B5%D0%B2%D0%B5%D1%82%D0%B0%D0%BA%D0%BE%D0%B2%D0%B0+21,+Balchik,+Bulgaria" target="_blank" rel="noopener">Апартаменты на карте</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- 28 -->
+<section class="day" id="d28" role="tabpanel">
+  <div class="dayHead">
+    <p class="date">Среда, 28 октября</p>
+    <h2>Чернооково</h2>
+    <p class="lead">Второй день оставлен свободным под Чернооково. Балчик — только если освободитесь раньше.</p>
+  </div>
+
+  <div class="stops">
+    <article class="stop plain">
+      <div class="body">
+        <p class="time">Утро → день</p>
+        <h3>Балчик → Чернооково → Балчик</h3>
+        <p>Едете в Чернооково и проводите там столько времени, сколько нужно. Никаких обязательных остановок.</p>
+        <div class="links"><a class="map" href="https://www.google.com/maps/dir/Balchik,+Bulgaria/Chernookovo,+General+Toshevo,+Bulgaria" target="_blank" rel="noopener">Маршрут</a></div>
+      </div>
+    </article>
+
+    <article class="stop hasMedia optional">
+      <figure class="media"><img src="assets/images/balchik-palace.jpg" alt="Дворец королевы Марии в Балчике"></figure>
+      <div class="body">
+        <span class="optTag">По желанию, если вернулись рано</span>
+        <h3>Дворец королевы Марии и Ботанический сад</h3>
+        <p>Террасы над морем, бывшая летняя резиденция румынской королевы Марии, сады, каменные лестницы и небольшие водные каскады.</p>
+        <p class="why"><b>Только по остаточному времени:</b> в октябре сад открыт до 18:00. Для нормальной прогулки нужно минимум 1,5–2 часа.</p>
+        <ul class="facts"><li>08:30–18:00</li><li>🌿 на улице</li><li>не обязательно</li></ul>
+        <div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=Balchik+Palace+Botanical+Garden" target="_blank" rel="noopener">Google Maps</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- 29 -->
+<section class="day" id="d29" role="tabpanel">
+  <div class="dayHead">
+    <p class="date">Четверг, 29 октября</p>
+    <h2>Балчик → София</h2>
+    <p class="lead">Длинный транспортный день. Никаких дополнительных достопримечательностей.</p>
+  </div>
+  <div class="note"><b>08:00, выезд из Балчика</b>Ориентир: около 6 часов с нормальной остановкой. Перед сдачей машины — заправка.</div>
+
+  <div class="stops">
+    <article class="stop hasMedia">
+      <figure class="media"><img src="assets/images/sofia.jpg" alt="София"></figure>
+      <div class="body">
+        <p class="time">Вечер</p>
+        <h3>Sofia Tech Park Apartments - Premium</h3>
+        <p>ул. „Ген. Йордан Венедиков“ 4, София 1784</p>
+        <div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.+%D0%93%D0%B5%D0%BD.+%D0%99%D0%BE%D1%80%D0%B4%D0%B0%D0%BD+%D0%92%D0%B5%D0%BD%D0%B5%D0%B4%D0%B8%D0%BA%D0%BE%D0%B2+4,+Sofia+1784,+Bulgaria" target="_blank" rel="noopener">Апартаменты на карте</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- 30 -->
+<section class="day" id="d30" role="tabpanel">
+  <div class="dayHead">
+    <p class="date">Пятница, 30 октября</p>
+    <h2>Вылет из Софии в 09:45</h2>
+    <p class="lead">Цель — быть в аэропорту не позже 07:45.</p>
+  </div>
+
+  <div class="stops">
+    <article class="stop plain">
+      <div class="body">
+        <p class="time">06:50</p>
+        <h3>Выйти из апартаментов</h3>
+        <p>Пешком к остановке УМБАЛ Св. Анна, затем прямой автобус №84 к Sofia Airport Terminal 2.</p>
+        <div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=St.+Anna+Hospital+bus+stop+Sofia" target="_blank" rel="noopener">Остановка</a></div>
+      </div>
+    </article>
+
+    <article class="stop hasMedia">
+      <figure class="media"><img src="assets/images/sofia-airport.jpg" alt="Аэропорт Софии"></figure>
+      <div class="body">
+        <p class="time">~07:07</p>
+        <h3>Автобус №84 → Terminal 2</h3>
+        <p>По актуальному будничному расписанию от остановки УМБАЛ Св. Анна (1196) автобусы в 07-м часу идут примерно так:</p>
+        <div class="buses" aria-label="Отправления автобуса 84"><span class="main">07:07</span><span class="backup">07:19</span><span>07:31</span><span>07:43</span><span>07:56</span></div>
+        <p class="why"><b>Берём 07:07.</b> Если не успели — 07:19 остаётся запасным вариантом. Вечером 29-го всё равно проверьте живое расписание на случай оперативных изменений.</p>
+        <div class="links">
+          <a class="map" href="https://www.google.com/maps/search/?api=1&query=St.+Anna+Hospital+bus+stop+Sofia" target="_blank" rel="noopener">Остановка</a>
+          <a class="map" href="https://www.google.com/maps/search/?api=1&query=Sofia+Airport+Terminal+2" target="_blank" rel="noopener">Terminal 2</a>
+        </div>
+      </div>
+    </article>
+  </div>
+  <div class="note warn"><b>Если рейс из Terminal 1</b>Лучше выйти примерно в 06:35–06:40 и заложить дополнительное время на переезд между терминалами.</div>
+</section>
+
+</main>
+
+<footer>
+  <div class="actions">
+    <button class="btn primary" type="button" onclick="sharePlan()">Поделиться планом</button>
+    <button class="btn" type="button" onclick="copyPlan(this)">Скопировать текстом</button>
+  </div>
+  <p>Фото: Wikimedia Commons. <a href="image-credits.html">Авторы, лицензии и источники</a>.</p>
+  <p>Расписание достопримечательностей проверено на 23 октября 2026.</p>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+
+/* ---------- Дни: переключение ---------- */
+const chips=[...document.querySelectorAll('.chip')];
+const days=[...document.querySelectorAll('.day')];
+function showDay(id,scroll){
+  if(!document.getElementById(id)) id='d24';
+  days.forEach(d=>d.classList.toggle('active',d.id===id));
+  chips.forEach(c=>c.setAttribute('aria-selected',c.dataset.day===id?'true':'false'));
+  const chip=chips.find(c=>c.dataset.day===id);
+  if(chip){const box=chip.parentElement;box.scrollLeft=chip.offsetLeft-(box.clientWidth-chip.offsetWidth)/2;}
+  if(scroll){
+    try{history.replaceState(null,'','#'+id)}catch(e){}
+    const nav=document.querySelector('.nav');
+    const y=nav.getBoundingClientRect().top+window.scrollY;
+    if(window.scrollY>y) window.scrollTo({top:y,behavior:'smooth'});
+  }
+}
+chips.forEach(c=>c.addEventListener('click',()=>showDay(c.dataset.day,true)));
+
+const now=new Date();
+let todayId=null;
+if(now.getFullYear()===2026&&now.getMonth()===9&&now.getDate()>=24&&now.getDate()<=30){
+  todayId='d'+now.getDate();
+  const t=chips.find(c=>c.dataset.day===todayId);
+  if(t){const dot=document.createElement('span');dot.className='today';dot.title='Сегодня';t.appendChild(dot);}
+}
+const fromHash=location.hash.replace('#','');
+showDay(/^d(2[4-9]|30)$/.test(fromHash)?fromHash:(todayId||'d24'),false);
+
+const hero=document.querySelector('.hero');
+const heroImg=hero.querySelector('img');
+function heroFail(){hero.classList.add('noPhoto');if(heroImg)heroImg.remove();}
+if(!heroImg) hero.classList.add('noPhoto');
+else if(heroImg.complete&&heroImg.naturalWidth===0) heroFail();
+else heroImg.addEventListener('error',heroFail,{once:true});
+
+/* ---------- Поделиться ---------- */
+const plainPlan=`БОЛГАРИЯ, 24–30 ОКТЯБРЯ 2026
+
+24.10 ПЛОВДИВ
+09:00 Епископская базилика Филиппополя
+10:10 Античный театр
+11:10 Старый город, Хисар Капия, Дом Хиндлияна
+12:30 Небет-Тепе
+13:15 Капана — обед
+15:00 Джумая-джамия, Римский стадион, Княз Александър I
+
+25.10 ПЛОВДИВ → ШИПКА → ВЕЛИКО-ТЫРНОВО
+Ночью перевод часов на 1 час назад
+08:30 выезд из Hilton
+~10:30 Голямата Косматка — гробница Севта III
+~11:35 храм-памятник «Рождество Христово»
+~13:15 Шипкинский перевал / Памятник Свободы — если хорошая видимость
+Вечером Guest House Diabora
+
+26.10 ВЕЛИКО-ТЫРНОВО
+09:00 Царевец
+11:40 Церковь Сорока мучеников
+13:30 Самоводская чаршия + улица Генерал Гурко
+18:20 Stambolov Bridge
+19:00 Sound & Light — смотреть бесплатно с моста
+
+27.10 ВЕЛИКО-ТЫРНОВО → ЧЕРНООКОВО → БАЛЧИК
+Днём Чернооково
+Вечером апартаменты: ул. „Възкресия Деветакова“ 21, Balchik 9600
+
+28.10 ЧЕРНООКОВО
+Второй день в Чернооково
+Если вернулись рано: Дворец королевы Марии + Ботанический сад Балчика (до 18:00)
+
+29.10 БАЛЧИК → СОФИЯ
+08:00 выезд
+Заправка и сдача машины
+Sofia Tech Park Apartments - Premium, ул. „Ген. Йордан Венедиков“ 4, София 1784
+
+30.10 ВЫЛЕТ 09:45
+06:50 выйти из апартаментов
+~07:07 автобус №84 от УМБАЛ Св. Анна → Terminal 2 (запасной 07:19)
+Быть в аэропорту до 07:45.`;
+
+async function copyText(){
+  try{await navigator.clipboard.writeText(plainPlan);return true;}
+  catch(e){
+    const ta=document.createElement('textarea');ta.value=plainPlan;ta.style.position='fixed';ta.style.opacity='0';
+    document.body.appendChild(ta);ta.select();
+    let ok=false;try{ok=document.execCommand('copy')}catch(_){}
+    ta.remove();return ok;
+  }
+}
+async function sharePlan(){
+  if(navigator.share){try{await navigator.share({title:'Болгария, 24–30 октября 2026',text:plainPlan});}catch(e){}return;}
+  const ok=await copyText();alert(ok?'План скопирован':'Не удалось скопировать: выделите текст вручную');
+}
+async function copyPlan(btn){
+  const ok=await copyText();const old=btn.textContent;
+  btn.textContent=ok?'Скопировано ✓':'Не получилось';
+  setTimeout(()=>btn.textContent=old,1500);
+}
+</script>
+</body>
+</html>
